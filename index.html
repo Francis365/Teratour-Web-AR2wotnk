@@ -40,6 +40,14 @@
 
             <a-camera gps-camera rotation-reader></a-camera>
         </a-scene>
+
+        <script>
+        function setCoordinates(latitude, longitude) {
+            console.log("setCoordinates", latitude, longitude);
+            const entity = document.getElementById('gps-entity');
+            entity.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+        }
+    </script>
     </body>
 </html>
 
